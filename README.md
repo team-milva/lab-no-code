@@ -2,7 +2,20 @@
 
 ---
 
-## Mac
+## Step 1 — Install VS Code
+
+Download and install VS Code from [code.visualstudio.com](https://code.visualstudio.com).
+
+**Mac:** After installing, open VS Code, press `Cmd + Shift + P`, and run:
+**Shell Command: Install 'code' command in PATH**
+
+**Windows:** During installation, make sure **"Add to PATH"** is checked.
+
+---
+
+## Step 2 — Run the setup script
+
+### Mac
 
 **Step 1** — Open Terminal (press `Cmd + Space`, type "Terminal", press Enter) and run:
 
@@ -16,7 +29,7 @@
 
 ---
 
-## Windows
+### Windows
 
 **Step 1** — Open PowerShell (press `Win + R`, type "powershell", press Enter) and run:
 
