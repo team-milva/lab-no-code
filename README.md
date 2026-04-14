@@ -4,31 +4,35 @@
 
 ## Mac
 
-**Step 1** — Download [install.command](https://github.com/team-milva/lab-no-code/raw/master/install.command)
+**Step 1** — Open Terminal (press `Cmd + Space`, type "Terminal", press Enter) and run:
 
-**Step 2** — Double-click the downloaded file
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/team-milva/lab-no-code/master/setup.sh)"
+```
 
+> **Alternative:** Right-click [this link](https://github.com/team-milva/lab-no-code/raw/master/install.command) → "Download Linked File", then double-click the downloaded file.
 > If macOS blocks it: right-click → Open → Open
 
-**Step 3** — A Terminal window opens and runs the setup automatically.
-Follow any prompts (a browser window may open to log in to GitHub).
+**Step 2** — Follow any prompts (a browser window may open to log in to GitHub).
 
-**Step 4** — Once VS Code opens, type **"start"** to GitHub Copilot in the chat panel to finish.
+**Step 3** — Once VS Code opens, type **"start"** to GitHub Copilot in the chat panel to finish.
 
 ---
 
 ## Windows
 
-**Step 1** — Download [install.bat](https://github.com/team-milva/lab-no-code/raw/master/install.bat)
+**Step 1** — Open PowerShell (press `Win + R`, type "powershell", press Enter) and run:
 
-**Step 2** — Double-click the downloaded file
+```powershell
+irm https://raw.githubusercontent.com/team-milva/lab-no-code/master/setup.ps1 | iex
+```
 
+> **Alternative:** Right-click [this link](https://github.com/team-milva/lab-no-code/raw/master/install.bat) → "Save link as", then double-click the downloaded file.
 > If Windows asks "Do you want to allow this app to make changes?" — click Yes
 
-**Step 3** — A PowerShell window opens and runs the setup automatically.
-Follow any prompts (a browser window may open to log in to GitHub).
+**Step 2** — Follow any prompts (a browser window may open to log in to GitHub).
 
-**Step 4** — Once VS Code opens, type **"start"** to GitHub Copilot in the chat panel to finish.
+**Step 3** — Once VS Code opens, type **"start"** to GitHub Copilot in the chat panel to finish.
 
 ---
 
