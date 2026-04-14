@@ -4,7 +4,7 @@
 
 ## Mac
 
-**Step 1** — Download [install.command](https://github.com/team-milva/lab-no-code/raw/main/install.command)
+**Step 1** — Download [install.command](https://github.com/team-milva/lab-no-code/raw/master/install.command)
 
 **Step 2** — Double-click the downloaded file
 
@@ -19,7 +19,7 @@ Follow any prompts (a browser window may open to log in to GitHub).
 
 ## Windows
 
-**Step 1** — Download [install.bat](https://github.com/team-milva/lab-no-code/raw/main/install.bat)
+**Step 1** — Download [install.bat](https://github.com/team-milva/lab-no-code/raw/master/install.bat)
 
 **Step 2** — Double-click the downloaded file
 

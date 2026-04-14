@@ -1,7 +1,7 @@
 #!/bin/bash
 # Milva Lab — Non-developer workspace setup
 # Run with:
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/team-milva/lab-no-code/main/setup.sh)"
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/team-milva/lab-no-code/master/setup.sh)"
 
 set -e
 

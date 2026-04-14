@@ -1,6 +1,6 @@
 # Milva Lab — Non-developer workspace setup (Windows)
 # Run with:
-#   irm https://raw.githubusercontent.com/team-milva/lab-no-code/main/setup.ps1 | iex
+#   irm https://raw.githubusercontent.com/team-milva/lab-no-code/master/setup.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
