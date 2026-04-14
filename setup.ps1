@@ -4,11 +4,20 @@
 
 $ErrorActionPreference = "Stop"
 
-$DEST = "$env:USERPROFILE\lab-workspace"
-
 Write-Host ""
 Write-Host "Milva Lab — Workspace Setup" -ForegroundColor White
 Write-Host "-------------------------------------------"
+Write-Host ""
+
+# ── 0. Choose install location ──────────────────────────────────────────────
+$defaultDest = "$env:USERPROFILE\lab-workspace"
+Write-Host "Where should the workspace be installed?"
+Write-Host "  Press Enter to use the default: $defaultDest" -ForegroundColor Cyan
+Write-Host ""
+$destInput = Read-Host "Folder path"
+$DEST = if ($destInput.Trim() -ne '') { $destInput.Trim() } else { $defaultDest }
+Write-Host ""
+Write-Host "Installing to: $DEST" -ForegroundColor Cyan
 Write-Host ""
 
 # ── 1. VS Code ───────────────────────────────────────────────────────────────
@@ -67,8 +76,10 @@ if (Test-Path "$DEST\.git") {
 } else {
   Write-Host ""
   Write-Host "Forking and cloning lab-workspace into $DEST ..." -ForegroundColor Cyan
-  Set-Location $env:USERPROFILE
-  gh repo fork team-milva/lab-workspace --clone --fork-name lab-workspace
+  $parentDir = Split-Path $DEST -Parent
+  if (-not (Test-Path $parentDir)) { New-Item -ItemType Directory -Path $parentDir -Force | Out-Null }
+  Set-Location $parentDir
+  gh repo fork team-milva/lab-workspace --clone --fork-name (Split-Path $DEST -Leaf)
 }
 
 # ── 6. Open VS Code ──────────────────────────────────────────────────────────

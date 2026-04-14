@@ -12,11 +12,21 @@ BLUE='\033[0;34m'
 BOLD='\033[1m'
 NC='\033[0m'
 
-DEST="$HOME/lab-workspace"
-
 echo ""
 echo -e "${BOLD}Milva Lab — Workspace Setup${NC}"
 echo "-------------------------------------------"
+echo ""
+
+# ── 0. Choose install location ──────────────────────────────────────────────
+echo -e "Where should the workspace be installed?"
+echo -e "  Press Enter to use the default: ${BLUE}$HOME/lab-workspace${NC}"
+echo ""
+read -rp "Folder path: " DEST_INPUT
+DEST="${DEST_INPUT:-$HOME/lab-workspace}"
+# Expand ~ if user typed it
+DEST="${DEST/#\~/$HOME}"
+echo ""
+echo -e "${BLUE}Installing to: $DEST${NC}"
 echo ""
 
 # ── 1. VS Code ──────────────────────────────────────────────────────────────
@@ -73,8 +83,9 @@ if [ -d "$DEST/.git" ]; then
 else
   echo ""
   echo -e "${BLUE}Forking and cloning lab-workspace into $DEST ...${NC}"
-  cd "$HOME"
-  gh repo fork team-milva/lab-workspace --clone --fork-name lab-workspace
+  mkdir -p "$(dirname "$DEST")"
+  cd "$(dirname "$DEST")"
+  gh repo fork team-milva/lab-workspace --clone --fork-name "$(basename "$DEST")"
 fi
 
 # ── 6. Open VS Code ──────────────────────────────────────────────────────────
